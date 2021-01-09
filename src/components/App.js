@@ -3,10 +3,10 @@ import Display from './Display';
 
 function App() {
   return (
-    <div className="">
+    <>
       <Display result="0" />
       <ButtonPanel />
-    </div>
+    </>
   );
 }
 
