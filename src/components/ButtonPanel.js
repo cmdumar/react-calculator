@@ -11,7 +11,7 @@ function ButtonPanel() {
         <button type="button">7</button>
         <button type="button">8</button>
         <button type="button">9</button>
-        <button type="button">X</button>
+        <button type="button">x</button>
       </div>
       <div className="group-3">
         <button type="button">4</button>
