@@ -2,22 +2,24 @@ import Big from 'big.js';
 
 function operate(numberOne, numberTwo, operation) {
   let result;
+  const num1 = Big(numberOne);
+  const num2 = Big(numberTwo);
 
   switch (operation) {
     case '+':
-      result = Big(numberOne) + Big(numberTwo);
+      result = num1 + num2;
       break;
     case '-':
-      result = Big(numberOne) - Big(numberTwo);
+      result = num1 - num2;
       break;
     case 'x':
-      result = Big(numberOne) * Big(numberTwo);
+      result = num1 * num2;
       break;
     case '÷':
-      result = Big(numberOne) / Big(numberTwo);
+      result = num1 / num2;
       break;
     case '%':
-      result = Big(numberOne) * 0.01;
+      result = num1 * 0.01;
       break;
     default:
       result = 0;
