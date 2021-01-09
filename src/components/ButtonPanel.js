@@ -1,34 +1,39 @@
+import Button from './Button';
+
 function ButtonPanel() {
+  const keyValue = [
+    ['AC', '+/-', '%', '÷'],
+    ['7', '8', '9', 'x'],
+    ['4', '5', '6', '-'],
+    ['1', '2', '3', '+'],
+    ['0', '.', '='],
+  ];
   return (
     <>
       <div className="group-1">
-        <button type="button">AC</button>
-        <button type="button">+/-</button>
-        <button type="button">%</button>
-        <button type="button">÷</button>
+        {keyValue[0].map(i => (
+          <Button key={i} name={i} />
+        ))}
       </div>
       <div className="group-2">
-        <button type="button">7</button>
-        <button type="button">8</button>
-        <button type="button">9</button>
-        <button type="button">x</button>
+        {keyValue[1].map(i => (
+          <Button key={i} name={i} />
+        ))}
       </div>
       <div className="group-3">
-        <button type="button">4</button>
-        <button type="button">5</button>
-        <button type="button">6</button>
-        <button type="button">-</button>
+        {keyValue[2].map(i => (
+          <Button key={i} name={i} />
+        ))}
       </div>
       <div className="group-4">
-        <button type="button">1</button>
-        <button type="button">2</button>
-        <button type="button">3</button>
-        <button type="button">+</button>
+        {keyValue[3].map(i => (
+          <Button key={i} name={i} />
+        ))}
       </div>
       <div className="group-5">
-        <button type="button">0</button>
-        <button type="button">.</button>
-        <button type="button">=</button>
+        {keyValue[4].map(i => (
+          <Button key={i} name={i} />
+        ))}
       </div>
     </>
   );
