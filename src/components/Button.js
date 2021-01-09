@@ -1,13 +1,15 @@
-import { string } from 'prop-types';
+import propTypes from 'prop-types';
 
 function Button({ name }) {
   return (
-    <div>{name}</div>
+    <button type="button">
+      {name}
+    </button>
   );
 }
 
 Button.propTypes = {
-  name: string.isRequired,
+  name: propTypes.string.isRequired,
 };
 
 export default Button;
