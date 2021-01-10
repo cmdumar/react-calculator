@@ -1,8 +1,8 @@
 import operate from './operate';
 
 function calculate(data, buttonName) {
-  const clone = { ...data };
-  let { total, next, operation } = clone;
+  // const clone = { ...data };
+  let { total, next, operation } = data;
 
   switch (buttonName) {
     case '+/-':
@@ -54,7 +54,8 @@ function calculate(data, buttonName) {
         next = null;
       }
   }
-  return clone;
+
+  return { total, next, operation };
 }
 
 export default calculate;
