@@ -12,13 +12,21 @@ class App extends React.Component {
       next: null,
       operation: null,
     };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(buttonName) {
+    const { total, next, operation } = this.state;
+    this.setState(calculate({ total, next, operation }, buttonName));
   }
 
   render() {
+    const { total, next } = this.state;
     return (
       <>
-        <Display result="0" />
-        <ButtonPanel />
+        <Display result={total || next || 0} />
+        <ButtonPanel clickHandler={this.handleClick} />
       </>
     );
   }
