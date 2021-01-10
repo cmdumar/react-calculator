@@ -1,8 +1,8 @@
 import propTypes from 'prop-types';
 
-function Button({ name }) {
+function Button({ name, clickHandler }) {
   return (
-    <button type="button">
+    <button type="button" onClick={() => clickHandler(name)}>
       {name}
     </button>
   );
@@ -10,6 +10,7 @@ function Button({ name }) {
 
 Button.propTypes = {
   name: propTypes.string.isRequired,
+  clickHandler: propTypes.func.isRequired,
 };
 
 export default Button;
