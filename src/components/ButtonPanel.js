@@ -10,35 +10,31 @@ function ButtonPanel({ clickHandler }) {
     ['0', '.', '='],
   ];
 
-  function handleClick(buttonName) {
-    return clickHandler(buttonName);
-  }
-
   return (
     <>
       <div className="group-1">
         {keyValue[0].map(i => (
-          <Button key={i} name={i} clickHandler={handleClick(i)} />
+          <Button key={i} name={i} clickHandler={() => clickHandler(i)} />
         ))}
       </div>
       <div className="group-2">
         {keyValue[1].map(i => (
-          <Button key={i} name={i} clickHandler={handleClick(i)} />
+          <Button key={i} name={i} clickHandler={() => clickHandler(i)} />
         ))}
       </div>
       <div className="group-3">
         {keyValue[2].map(i => (
-          <Button key={i} name={i} clickHandler={handleClick(i)} />
+          <Button key={i} name={i} clickHandler={() => clickHandler(i)} />
         ))}
       </div>
       <div className="group-4">
         {keyValue[3].map(i => (
-          <Button key={i} name={i} clickHandler={handleClick(i)} />
+          <Button key={i} name={i} clickHandler={() => clickHandler(i)} />
         ))}
       </div>
       <div className="group-5">
         {keyValue[4].map(i => (
-          <Button key={i} name={i} clickHandler={handleClick(i)} />
+          <Button key={i} name={i} clickHandler={() => clickHandler(i)} />
         ))}
       </div>
     </>
