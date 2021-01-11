@@ -3,7 +3,7 @@ import ButtonPanel from './ButtonPanel';
 import Display from './Display';
 import calculate from '../logic/calculate';
 
-const App = () => {
+function App() {
   const [data, setData] = useState({ total: null, next: null, operation: null });
 
   const handleClick = buttonName => {
@@ -18,6 +18,6 @@ const App = () => {
       <ButtonPanel clickHandler={handleClick} />
     </>
   );
-};
+}
 
 export default App;
