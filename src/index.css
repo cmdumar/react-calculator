@@ -25,3 +25,37 @@ code {
     'Courier New',
     monospace;
 }
+
+.container {
+  max-width: 700px;
+}
+
+.display {
+  height: 100px;
+  background-color: gray;
+  color: white;
+  font-weight: bolder;
+  padding: 10px;
+  text-align: right;
+}
+
+.group {
+  height: 100px;
+}
+
+button {
+  width: 25%;
+  border: 1px solid #ccc;
+  height: 100%;
+  background-color: #f0f0f0;
+  font-size: 16px;
+  outline: 0;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.wide {
+  width: 50%;
+}
