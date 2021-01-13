@@ -10,32 +10,61 @@ function ButtonPanel({ clickHandler }) {
     ['0', '.', '='],
   ];
 
+  const orangeBtn = ['÷', 'x', '-', '+', '='];
+
+  let color = false;
+
   return (
     <>
-      <div className="group-1">
-        {keyValue[0].map(i => (
-          <Button key={i} name={i} clickHandler={() => clickHandler(i)} />
-        ))}
+      <div className="group">
+        {keyValue[0].map(i => {
+          if (orangeBtn.includes(i)) {
+            color = true;
+          } else {
+            color = false;
+          }
+          return <Button key={i} name={i} color={color} clickHandler={() => clickHandler(i)} />;
+        })}
       </div>
-      <div className="group-2">
-        {keyValue[1].map(i => (
-          <Button key={i} name={i} clickHandler={() => clickHandler(i)} />
-        ))}
+      <div className="group">
+        {keyValue[1].map(i => {
+          if (orangeBtn.includes(i)) {
+            color = true;
+          } else {
+            color = false;
+          }
+          return <Button key={i} name={i} color={color} clickHandler={() => clickHandler(i)} />;
+        })}
       </div>
-      <div className="group-3">
-        {keyValue[2].map(i => (
-          <Button key={i} name={i} clickHandler={() => clickHandler(i)} />
-        ))}
+      <div className="group">
+        {keyValue[2].map(i => {
+          if (orangeBtn.includes(i)) {
+            color = true;
+          } else {
+            color = false;
+          }
+          return <Button key={i} name={i} color={color} clickHandler={() => clickHandler(i)} />;
+        })}
       </div>
-      <div className="group-4">
-        {keyValue[3].map(i => (
-          <Button key={i} name={i} clickHandler={() => clickHandler(i)} />
-        ))}
+      <div className="group">
+        {keyValue[3].map(i => {
+          if (orangeBtn.includes(i)) {
+            color = true;
+          } else {
+            color = false;
+          }
+          return <Button key={i} name={i} color={color} clickHandler={() => clickHandler(i)} />;
+        })}
       </div>
-      <div className="group-5">
-        {keyValue[4].map(i => (
-          <Button key={i} name={i} clickHandler={() => clickHandler(i)} />
-        ))}
+      <div className="group">
+        {keyValue[4].map(i => {
+          if (orangeBtn.includes(i)) {
+            color = true;
+          } else {
+            color = false;
+          }
+          return <Button key={i} name={i} wide={i === '0'} color={color} clickHandler={() => clickHandler(i)} />;
+        })}
       </div>
     </>
   );

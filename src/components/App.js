@@ -13,10 +13,10 @@ function App() {
 
   const { total, next } = data;
   return (
-    <>
+    <div className="container">
       <Display result={next || total || 0} />
       <ButtonPanel clickHandler={handleClick} />
-    </>
+    </div>
   );
 }
 
