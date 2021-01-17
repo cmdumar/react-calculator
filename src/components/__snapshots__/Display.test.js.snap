@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display Component for displaying the calculations 1`] = `
+<div
+  className="display"
+>
+  222
+</div>
+`;
