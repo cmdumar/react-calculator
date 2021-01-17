@@ -1,7 +1,6 @@
 import operate from './operate';
 
 function calculate(data, buttonName) {
-  // const clone = { ...data };
   let { total, next, operation } = data;
 
   switch (buttonName) {
