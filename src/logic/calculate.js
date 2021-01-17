@@ -5,8 +5,10 @@ function calculate(data, buttonName) {
 
   switch (buttonName) {
     case '+/-':
-      total *= -1;
-      next *= -1;
+      if (total !== null || next !== null) {
+        total *= `${-1}`;
+        next *= `${-1}`;
+      }
       break;
     case 'AC':
       total = null;
