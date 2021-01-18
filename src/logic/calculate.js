@@ -1,13 +1,14 @@
 import operate from './operate';
 
 function calculate(data, buttonName) {
-  // const clone = { ...data };
   let { total, next, operation } = data;
 
   switch (buttonName) {
     case '+/-':
-      total *= -1;
-      next *= -1;
+      if (total !== null || next !== null) {
+        total *= `${-1}`;
+        next *= `${-1}`;
+      }
       break;
     case 'AC':
       total = null;
